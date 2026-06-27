@@ -1,0 +1,28 @@
+{
+  "name": "breadcrumbs-vscode",
+  "displayName": "Breadcrumbs VS Code Connector",
+  "version": "0.1.0",
+  "publisher": "breadcrumbs",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Breadcrumbs",
+      "properties": {
+        "breadcrumbs.apiBase": {
+          "type": "string",
+          "default": "http://127.0.0.1:8765",
+          "description": "Local Breadcrumbs API URL."
+        },
+        "breadcrumbs.sessionId": {
+          "type": "string",
+          "default": "",
+          "description": "Active Breadcrumbs session id."
+        }
+      }
+    }
+  }
+}
